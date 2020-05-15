@@ -60,8 +60,7 @@ public class MnemonicBruteForce {
 				//byte[] seed = MnemonicCode.toSeed(Arrays.asList(stringBuilder.toString().split(" ")), "");	        
 		        //System.out.println(ConvertByteArrayToHexString.convert(seed));
 				System.out.println(stringBuilder.toString());
-			}
-			
+			}			
 	        
 	        if (this.loop == 1_048_575) {
 		        //AddressFileWriter.writeFile(mnemonicPhfase, "/home/ivanov/Desktop/mnemonic/" + fileName + ".txt");
