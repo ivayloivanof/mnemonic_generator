@@ -15,8 +15,8 @@ public class MnemonicBruteForce {
 	private List<String> mnemonicPhfase = new ArrayList<String>();
 	private boolean convertInPrivateKey;
 	
-	public MnemonicBruteForce(boolean convert) {
-		setConvertInPrivateKey(convert);
+	public MnemonicBruteForce(boolean convertToPrivateKey) {
+		setConvertInPrivateKey(convertToPrivateKey);
 	}	
 
 	public boolean isConvertInPrivateKey() {
@@ -57,12 +57,14 @@ public class MnemonicBruteForce {
 				Credentials credentials = WalletUtils.loadBip39Credentials(null, stringBuilder.toString());
 				System.out.println(credentials.getEcKeyPair().getPrivateKey());
 			} else {
+				//byte[] seed = MnemonicCode.toSeed(Arrays.asList(stringBuilder.toString().split(" ")), "");	        
+		        //System.out.println(ConvertByteArrayToHexString.convert(seed));
 				System.out.println(stringBuilder.toString());
 			}
 			
 	        
 	        if (this.loop == 1_048_575) {
-		        //AddressFileWriter.writeFile(mnemonicPhfase, "your/path/file" + fileName + ".txt");
+		        //AddressFileWriter.writeFile(mnemonicPhfase, "/home/ivanov/Desktop/mnemonic/" + fileName + ".txt");
 
 	        	this.mnemonicPhfase = null;
 	        	this.mnemonicPhfase = new ArrayList<String>();
